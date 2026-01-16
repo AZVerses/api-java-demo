@@ -29,7 +29,7 @@ public class UserPrivateWebSocketTest {
     @Before
     public void init(){
         try {
-            webSocketClient = new WebSocketClient("wss://f-ws.myaztests.com/ws/user");
+            webSocketClient = new WebSocketClient("wss://f-ws.azverse.xyz/ws/user");
 
             client = new UFutureApiClientImpl(null);
         } catch (URISyntaxException e) {

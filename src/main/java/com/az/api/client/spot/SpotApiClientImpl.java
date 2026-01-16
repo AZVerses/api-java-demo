@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class SpotApiClientImpl implements SpotApiClient {
 
-    private final static String API_URL = "https://s-api.myaztests.com";
+    private final static String API_URL = "https://s-api.azverse.xyz";
 
     private final SpotApiService service;
 

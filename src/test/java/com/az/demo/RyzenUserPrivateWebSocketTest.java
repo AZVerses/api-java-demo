@@ -32,7 +32,7 @@ public class RyzenUserPrivateWebSocketTest {
 //            properties.setHost("127.0.0.1");
 //            properties.setEnabled(true);
 //            properties.setPort(7890);
-            webSocketClient = new WebSocketClient("wss://s-ws.myaztests.com/private");
+            webSocketClient = new WebSocketClient("wss://s-ws.azverse.xyz/private");
 //            webSocketClient.setProxy(new Proxy(Proxy.Type.HTTP, new InetSocketAddress(properties.getHost(), properties.getPort())));
 
             spotApiClient = new SpotApiClientImpl(null);

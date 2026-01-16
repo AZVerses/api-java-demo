@@ -22,7 +22,7 @@ public class UserWebSocketTest {
     @Before
     public void init(){
         try {
-            webSocketClient = new WebSocketClient("wss://f-ws.myaztests.com/ws/market");
+            webSocketClient = new WebSocketClient("wss://f-ws.azverse.xyz/ws/market");
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
