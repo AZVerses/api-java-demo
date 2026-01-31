@@ -228,6 +228,13 @@ public class RestTest {
         System.out.println("result====" + HttpUtil.post(uri,JSON.toJSONString(param)));
     }
 
-
+    @Test
+    public void getBuilderUserList() {
+        String uri = "/az/api/stats/v1/builder/user-list";
+        Map<String, Object> param = new HashMap<>();
+        param.put("lastId", "0");
+        param.put("pageSize", "2");
+        System.out.println("result====" + HttpUtil.get(uri, param));
+    }
 
 }
