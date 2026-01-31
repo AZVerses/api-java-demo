@@ -98,4 +98,7 @@ public interface FutureApiClient {
 
     FutureCommonResponse adjustLeverage(String symbol,String positionSide,Integer leverage);
 
+    FutureCommonResponse getBuilderOrderHistory(String address, Long startTime, Long endTime, Long id, String direction, Long limit);
+
+    FutureCommonResponse getBuilderOrderOpen(String address, Long startTime, Long endTime, Long id, String direction, Long limit);
 }

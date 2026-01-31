@@ -128,7 +128,7 @@ public class SpotApiClientTest {
 
     @Test
     public void getBuilderOrderOpen() {
-        CommonResponse builderOrderHistory = spotApiClient.getBuilderOrderOpen(null, null, null, 2L, null, null);
+        CommonResponse builderOrderHistory = spotApiClient.getBuilderOrderOpen(null, null, null, 3L, null, null);
         System.out.println("result:"+ builderOrderHistory);
     }
 }

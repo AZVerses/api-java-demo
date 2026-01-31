@@ -143,4 +143,9 @@ public interface FutureApiService {
     @Headers("Content-Type: application/x-www-form-urlencoded")
     Call<FutureCommonResponse> adjustLeverage(@Query("symbol") String symbol,@Query("positionSide") String positionSide,@Query("leverage") Integer leverage);
 
+    @GET("/az/future/user/v1/builder/order/list-history")
+    Call<FutureCommonResponse> getBuilderOrderHistory(@Query("address") String address, @Query("startTime") Long startTime, @Query("endTime") Long endTime,  @Query("id") Long id, @Query("direction") String direction, @Query("limit") Long limit);
+
+    @GET("/az/future/user/v1/builder/order/open-list")
+    Call<FutureCommonResponse> getBuilderOrderOpen(@Query("address") String address, @Query("startTime") Long startTime, @Query("endTime") Long endTime,  @Query("id") Long id, @Query("direction") String direction, @Query("limit") Long limit);
 }

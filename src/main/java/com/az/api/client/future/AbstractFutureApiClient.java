@@ -216,6 +216,16 @@ public abstract class AbstractFutureApiClient implements FutureApiClient {
         return executeSync(getService().adjustLeverage(symbol,positionSide,leverage));
     }
 
+    @Override
+    public  FutureCommonResponse getBuilderOrderHistory(String address, Long startTime, Long endTime, Long id, String direction, Long limit) {
+        return executeSync(getService().getBuilderOrderHistory(address, startTime, endTime, id, direction, limit));
+    }
+
+    @Override
+    public  FutureCommonResponse getBuilderOrderOpen(String address, Long startTime, Long endTime, Long id, String direction, Long limit) {
+        return executeSync(getService().getBuilderOrderOpen(address, startTime, endTime, id, direction, limit));
+    }
+
     public FutureCommonResponse executeSync(Call<FutureCommonResponse> call) {
         try {
             Response<FutureCommonResponse> response = call.execute();

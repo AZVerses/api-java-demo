@@ -298,4 +298,15 @@ public class UFutureApiClientTest {
         System.out.println("result:"+commonResponse);
     }
 
+    @Test
+    public void getBuilderOrderHistory() {
+        FutureCommonResponse commonResponse = client.getBuilderOrderHistory(null, null, null, null, null, 2L);
+        System.out.println("result:"+commonResponse);
+    }
+
+    @Test
+    public void getBuilderOrderOpen() {
+        FutureCommonResponse commonResponse = client.getBuilderOrderOpen(null, null, null, null, null, 2L);
+        System.out.println("result:"+commonResponse);
+    }
 }
