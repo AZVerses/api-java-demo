@@ -100,6 +100,16 @@ public class SpotApiClientImpl implements SpotApiClient {
         return executeSync(service.getWsToken());
     }
 
+    @Override
+    public CommonResponse getBuilderOrderHistory(String address, Long startTime, Long endTime, Long limit, String direction, Long fromId) {
+        return executeSync(service.getBuilderOrderHistory(address, startTime, endTime, limit, direction, fromId));
+    }
+
+    @Override
+    public CommonResponse getBuilderOrderOpen(String address, Long startTime, Long endTime, Long limit, String direction, Long fromId) {
+        return executeSync(service.getBuilderOrderOpen(address, startTime, endTime, limit, direction, fromId));
+    }
+
     public CommonResponse executeSync(Call<CommonResponse> call) {
         try {
             Response<CommonResponse> response = call.execute();

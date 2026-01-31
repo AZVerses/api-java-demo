@@ -53,4 +53,12 @@ public interface SpotApiService {
 
     @POST("/az/spot/ws-token")
     Call<CommonResponse> getWsToken();
+
+
+    //------------------------builder
+    @GET("/az/spot/builder-order/list-history")
+    Call<CommonResponse> getBuilderOrderHistory(@Query("address") String address, @Query("startTime") Long startTime, @Query("endTime") Long endTime, @Query("limit") Long limit, @Query("direction") String direction, @Query("fromId") Long fromId);
+
+    @GET("/az/spot/builder-order/open-list")
+    Call<CommonResponse> getBuilderOrderOpen(@Query("address") String address, @Query("startTime") Long startTime, @Query("endTime") Long endTime, @Query("limit") Long limit, @Query("direction") String direction, @Query("fromId") Long fromId);
 }

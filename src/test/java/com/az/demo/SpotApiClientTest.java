@@ -119,4 +119,16 @@ public class SpotApiClientTest {
         CommonResponse commonResponse = spotApiClient.getWsToken();
         System.out.println("result:"+commonResponse);
     }
+
+    @Test
+    public void getBuilderOrderHistory() {
+        CommonResponse builderOrderHistory = spotApiClient.getBuilderOrderHistory(null, null, null, 2L, null, null);
+        System.out.println("result:"+ builderOrderHistory);
+    }
+
+    @Test
+    public void getBuilderOrderOpen() {
+        CommonResponse builderOrderHistory = spotApiClient.getBuilderOrderOpen(null, null, null, 2L, null, null);
+        System.out.println("result:"+ builderOrderHistory);
+    }
 }

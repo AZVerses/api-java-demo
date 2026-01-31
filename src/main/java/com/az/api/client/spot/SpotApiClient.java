@@ -1,10 +1,8 @@
 package com.az.api.client.spot;
 
 import com.az.api.dto.CommonResponse;
-import com.az.api.dto.spot.NetworthUpdateRequest;
 import com.az.api.dto.spot.SpotPostOrderRequest;
 import com.az.api.dto.spot.SpotUpdateOrderRequest;
-import retrofit2.http.Query;
 
 import java.util.List;
 
@@ -40,4 +38,8 @@ public interface SpotApiClient {
     CommonResponse updateOrder(Long id, SpotUpdateOrderRequest request);
 
     CommonResponse getWsToken();
+
+    CommonResponse getBuilderOrderHistory(String address, Long startTime, Long endTime, Long limit, String direction, Long fromId);
+
+    CommonResponse getBuilderOrderOpen(String address, Long startTime, Long endTime, Long limit, String direction, Long fromId);
 }
